@@ -14,9 +14,9 @@ const urlSchemaStore = 'https://json.schemastore.org/'
 const catalog = require('./api/json/catalog.json')
 const schemaV4JSON = require(pt.resolve('.', schemaDir, 'schema-draft-v4.json'))
 const schemaValidation = require('./schema-validation.json')
-const schemasToBeTested = fs.readdirSync(schemaDir)
-const foldersPositiveTest = fs.readdirSync(testPositiveDir)
-const foldersNegativeTest = fs.readdirSync(testNegativeDir)
+const schemasToBeTested = ['web-manifest.json', 'web-manifest-share-target.json']
+const foldersPositiveTest = ['web-manifest', 'web-manifest-share-target']
+const foldersNegativeTest = ['web-manifest-share-target']
 const countSchemasType = [
   { schemaName: '2020-12', schemaStr: 'json-schema.org/draft/2020-12/schema', totalCount: 0, active: true },
   { schemaName: '2019-09', schemaStr: 'json-schema.org/draft/2019-09/schema', totalCount: 0, active: true },
