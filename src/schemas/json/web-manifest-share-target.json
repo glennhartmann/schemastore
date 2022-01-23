@@ -17,11 +17,11 @@
       "description": "Describes how the application receives share data.",
       "properties": {
         "action": {
-          "description": "TODO",
+          "description": "The URL for the web share target.",
           "type": "string"
         },
         "method": {
-          "description": "TODO",
+          "description": "The HTTP request method for the web share target.",
           "type": "string",
           "enum": [
             "GET",
@@ -32,7 +32,7 @@
           "default": "GET"
         },
         "enctype": {
-          "description": "TODO",
+          "description": "This member specifies the encoding in the share request.",
           "type": "string",
           "enum": [
             "application/x-www-form-urlencoded",
@@ -43,7 +43,7 @@
           "default": "application/x-www-form-urlencoded"
         },
         "params": {
-          "description": "TODO",
+          "description": "Specifies what data gets shared in the request.",
           "$ref": "#/definitions/share_target_params"
         }
       },
@@ -51,22 +51,22 @@
     },
     "share_target_params": {
       "type": "object",
-      "description": "TODO",
+      "description": "Specifies what data gets shared in the request.",
       "properties": {
         "title": {
-          "description": "TODO",
+          "description": "The name of the query parameter used for the title of the document being shared.",
           "type": "string"
         },
         "text": {
-          "description": "TODO",
+          "description": "The name of the query parameter used for the message body, made of arbitrary text.",
           "type": "string"
         },
         "url": {
-          "description": "TODO",
+          "description": "The name of the query parameter used for the URL string referring to a resource being shared.",
           "type": "string"
         },
         "files": {
-          "description": "TODO",
+          "description": "Description of how the application receives files from share requests.",
           "oneOf": [
             {
               "$ref": "#/definitions/share_target_files"
@@ -83,14 +83,14 @@
     },
     "share_target_files": {
       "type": "object",
-      "description": "TODO",
+      "description": "Description of how the application receives files from share requests.",
       "properties": {
         "name": {
-          "description": "TODO",
+          "description": "The name of the form field used to share the files.",
           "type": "string"
         },
         "accept": {
-          "description": "TODO",
+          "description": "Sequence of accepted MIME types or file extensions can be shared to the application.",
           "oneOf": [
             {
               "type": "string",
