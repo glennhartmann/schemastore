@@ -93,12 +93,14 @@
           "description": "TODO",
           "oneOf": [
             {
-              "type": "string"
+              "type": "string",
+              "pattern": "^((\\..*)|(.*/.*))$"
             },
             {
               "type": "array",
               "items": {
-                "type": "string"
+                "type": "string",
+              "pattern": "^((\\..*)|(.*/.*))$"
               }
             }
           ]
